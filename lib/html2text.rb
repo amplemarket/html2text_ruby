@@ -133,7 +133,7 @@ class Html2Text
         "\n"
 
       when "div"
-        if node.parent.name == "div" && (node.parent.text.strip == node.text.strip)
+        if node.parent.name == "div" && (node.parent.text&.strip == node.text&.strip)
           ""
         else
           "\n"
